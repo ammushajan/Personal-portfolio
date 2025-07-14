@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:personal_portfolio/routes.dart';
+import 'package:personal_portfolio/themes/themes.dart';
 
 /// [PortfoilioApp] is the main application widget that sets up the MaterialApp
 /// with the router configuration.
@@ -12,6 +13,7 @@ class PortfoilioApp extends StatelessWidget {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'Portfolio App',
+      theme: Themes.buildLightTheme(),
       routerConfig: Routes.buildRoutes,
     );
   }
