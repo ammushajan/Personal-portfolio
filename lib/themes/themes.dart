@@ -13,7 +13,6 @@ class Themes {
     return ThemeData(
       primaryColor: AppColors.white,
       textTheme: TuxTypography.buildTextTheme(),
-      hoverColor: Colors.transparent,
       splashColor: Colors.transparent,
       canvasColor: Colors.transparent,
       highlightColor: Colors.transparent,
