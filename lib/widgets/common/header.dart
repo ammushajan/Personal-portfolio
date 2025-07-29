@@ -16,7 +16,7 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(20.0),
-      color: AppColors.white,
+      color: Colors.transparent,
       child: Row(
         children: [
           InkWell(

@@ -10,6 +10,11 @@ class BaseLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: Header(), body: child);
+    return Scaffold(
+      appBar: Header(),
+      extendBodyBehindAppBar: true,
+      body: child,
+      backgroundColor: Colors.transparent,
+    );
   }
 }
