@@ -13,46 +13,50 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
     return BaseLayout(
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            Text(
-              Strings.name,
-              style: Theme.of(
-                context,
-              ).textTheme.displayLarge500?.copyWith(color: AppColors.white),
-            ),
-            SizedBox(height: 20),
-            ShaderMask(
-              blendMode: BlendMode.srcIn,
-              shaderCallback:
-                  (bounds) => LinearGradient(
-                    colors: [AppColors.white, AppColors.black],
-                  ).createShader(
-                    Rect.fromLTWH(0, 0, bounds.width, bounds.height),
-                  ),
-              child: Text(
+      child: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              AppColors.purplePizzazz,
+              AppColors.cyan,
+              AppColors.blackRock,
+            ],
+          ),
+        ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Text(
+                Strings.name,
+                style: Theme.of(
+                  context,
+                ).textTheme.displayLarge500?.copyWith(color: AppColors.white),
+              ),
+              SizedBox(height: 20),
+              Text(
                 Strings.role,
                 style: Theme.of(context).textTheme.headlineLarge?.copyWith(
                   color: AppColors.white,
                   fontStyle: FontStyle.italic,
                 ),
               ),
-            ),
-            SizedBox(height: 20),
-            SizedBox(
-              width: screenSize.width * 0.4,
-              child: Text(
-                Strings.description,
-                textAlign: TextAlign.center,
-                style: Theme.of(
-                  context,
-                ).textTheme.headlineSmall?.copyWith(color: AppColors.white),
+              SizedBox(height: 20),
+              SizedBox(
+                width: screenSize.width * 0.5,
+                child: Text(
+                  Strings.description,
+                  textAlign: TextAlign.center,
+                  style: Theme.of(
+                    context,
+                  ).textTheme.headlineSmall?.copyWith(color: AppColors.white),
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
