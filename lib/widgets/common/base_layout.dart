@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:personal_portfolio/themes/colors.dart';
 
 import 'package:personal_portfolio/widgets/common/header.dart';
 
@@ -13,7 +14,21 @@ class BaseLayout extends StatelessWidget {
     return Scaffold(
       appBar: Header(),
       extendBodyBehindAppBar: true,
-      body: child,
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              AppColors.purplePizzazz,
+              AppColors.cyan,
+              AppColors.blackRock,
+            ],
+            stops: const [0.0, 0.8, 1.0],
+          ),
+        ),
+        child: child,
+      ),
       backgroundColor: Colors.transparent,
     );
   }
