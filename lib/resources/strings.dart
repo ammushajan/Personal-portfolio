@@ -3,7 +3,7 @@ class Strings {
   Strings._();
   static const String homeLabel = 'Home';
   static const String aboutLabel = 'About';
-  static const String projectsLabel = 'Work';
+  static const String projectsLabel = 'Projects';
   static const String contactLabel = 'Contact';
   static const String name = 'Ammu J Shajan';
   static const String firstName = 'Ammu';
