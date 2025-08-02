@@ -6,7 +6,8 @@ class Strings {
   static const String projectsLabel = 'Work';
   static const String contactLabel = 'Contact';
   static const String name = 'Ammu J Shajan';
-  static const String role = 'Senior Software Engineer';
+  static const String firstName = 'Ammu';
+  static const String role = 'Senior Software Engineer ';
   static const String description =
-      'Im a front end developer with 5 years of crafting clean code, fixing bugs before coffee kicks in, and leading teams without breaking apps (or spirits). Loves clean UIs and chaotic commit messages.';
+      'Passionate Front-End Developer crafting responsive, user-friendly interfaces with clean code and creative flair. Bridging design and tech to build smooth, engaging web & mobile experiences.';
 }

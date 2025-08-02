@@ -14,6 +14,7 @@ class HomePage extends StatelessWidget {
     Size screenSize = MediaQuery.of(context).size;
     return BaseLayout(
       child: Container(
+        constraints: BoxConstraints(),
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topLeft,
@@ -23,25 +24,37 @@ class HomePage extends StatelessWidget {
               AppColors.cyan,
               AppColors.blackRock,
             ],
+            stops: const [0.0, 0.8, 1.0],
           ),
         ),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            mainAxisSize: MainAxisSize.max,
+            mainAxisSize: MainAxisSize.min,
             children: [
               Text(
-                Strings.name,
+                'Hi! Im ${Strings.firstName} ✨',
                 style: Theme.of(
                   context,
-                ).textTheme.displayLarge500?.copyWith(color: AppColors.white),
+                ).textTheme.displayLarge600?.copyWith(color: AppColors.white),
               ),
               SizedBox(height: 20),
-              Text(
-                Strings.role,
-                style: Theme.of(context).textTheme.headlineLarge?.copyWith(
-                  color: AppColors.white,
-                  fontStyle: FontStyle.italic,
+              ShaderMask(
+                shaderCallback: (Rect bounds) {
+                  return LinearGradient(
+                    colors: [AppColors.blackRock, AppColors.purplePizzazz],
+                  ).createShader(
+                    Rect.fromLTWH(0, 0, bounds.width, bounds.height),
+                  );
+                },
+                child: Text(
+                  Strings.role,
+                  style: Theme.of(
+                    context,
+                  ).textTheme.headlineMedium600?.copyWith(
+                    color: AppColors.white,
+                    fontStyle: FontStyle.italic,
+                  ),
                 ),
               ),
               SizedBox(height: 20),
