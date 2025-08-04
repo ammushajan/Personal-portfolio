@@ -18,7 +18,19 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(20.0),
-      color: Colors.transparent,
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [AppColors.purplePizzazz, AppColors.cyan],
+        ),
+        border: Border(
+          bottom: BorderSide(
+            color: AppColors.white.withValues(alpha: 0.2),
+            width: 1.0,
+          ),
+        ),
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: List.generate(headerList.length, (index) {
