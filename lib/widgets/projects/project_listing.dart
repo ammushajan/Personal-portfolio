@@ -5,6 +5,7 @@ import 'package:personal_portfolio/themes/typography.dart';
 import 'package:personal_portfolio/core/services/project_services.dart';
 import 'package:personal_portfolio/core/models/project_details_model.dart';
 
+///[ProjectListing] is a widget that displays a list of projects.
 class ProjectListing extends StatefulWidget {
   const ProjectListing({super.key});
 
@@ -57,13 +58,17 @@ class _ProjectListingState extends State<ProjectListing> {
                       width: screenSize.width * 0.4,
                       child: Text(
                         project.description,
-                        style: Theme.of(context).textTheme.bodyLarge,
+                        style: Theme.of(
+                          context,
+                        ).textTheme.bodyLarge?.copyWith(color: AppColors.white),
                       ),
                     ),
                     SizedBox(height: 8),
                     Text(
                       project.framework,
-                      style: Theme.of(context).textTheme.bodyLarge,
+                      style: Theme.of(
+                        context,
+                      ).textTheme.bodyLarge?.copyWith(color: AppColors.white),
                     ),
                   ],
                 ),
