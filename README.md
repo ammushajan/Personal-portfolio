@@ -1,4 +1,4 @@
-# 🌟 Ammu Joseph Shajan - Flutter Developer Portfolio
+# 🌟 Ammu Joseph Shajan - Senior Software Engineer Portfolio
 
 This is my personal portfolio built with **Flutter Web**, showcasing my journey as a **Senior Software Engineer** with expertise in Flutter, React, and full-stack development.
 
@@ -29,7 +29,7 @@ It highlights my skills, selected projects, experience, and how to reach out to 
 
 ## 🚀 Live Demo
 
-[🔗 View Live Portfolio](https://ammushajan.netlify.app/) *(Replace with actual URL)*
+[🔗 View Live Portfolio](https://ammushajan.netlify.app/)
 
 ## 📬 Contact
 
