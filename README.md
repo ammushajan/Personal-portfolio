@@ -29,7 +29,7 @@ It highlights my skills, selected projects, experience, and how to reach out to 
 
 ## 🚀 Live Demo
 
-[🔗 View Live Portfolio](https://your-portfolio-link.web.app) *(Replace with actual URL)*
+[🔗 View Live Portfolio](https://ammushajan.netlify.app/) *(Replace with actual URL)*
 
 ## 📬 Contact
 
