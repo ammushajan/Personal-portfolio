@@ -7,13 +7,23 @@ import 'package:personal_portfolio/widgets/common/header.dart';
 /// It includes an app bar and a body that can be customized with different widgets.
 class BaseLayout extends StatelessWidget {
   final Widget child;
+  final int currentIndex;
   final List<Color>? gradientColors;
-  const BaseLayout({super.key, required this.child, this.gradientColors});
+  const BaseLayout({
+    super.key,
+    required this.child,
+    this.gradientColors,
+    this.currentIndex = 0,
+  });
 
   @override
   Widget build(BuildContext context) {
+    Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: Header(),
+      appBar: PreferredSize(
+        preferredSize: Size(screenSize.width, 200.0),
+        child: Header(currentIndex: currentIndex),
+      ),
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
