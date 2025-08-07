@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
 
 import 'package:personal_portfolio/screens/home.dart';
+import 'package:personal_portfolio/screens/contact.dart';
 import 'package:personal_portfolio/screens/projects.dart';
 
 //[Routes] is a class that defines the routes for the application.
@@ -27,6 +28,12 @@ class Routes {
           pageBuilder:
               (context, state) =>
                   const NoTransitionPage<void>(child: ProjectScreen()),
+        ),
+        GoRoute(
+          path: contact,
+          pageBuilder:
+              (context, state) =>
+                  const NoTransitionPage<void>(child: ContactPage()),
         ),
       ],
     );
