@@ -36,7 +36,8 @@ class ProjectScreen extends StatelessWidget {
               ),
               Padding(
                 padding: EdgeInsets.symmetric(
-                  horizontal: screenSize.width * 0.1,
+                  horizontal:
+                      screenSize.width > 850 ? screenSize.width * 0.1 : 0,
                   vertical: 40.0,
                 ),
                 child: ProjectListing(),
