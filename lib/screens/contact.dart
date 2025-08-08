@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:ammu_portfolio/resources/contact.dart';
 
 import 'package:ammu_portfolio/themes/colors.dart';
 import 'package:ammu_portfolio/resources/strings.dart';
+import 'package:ammu_portfolio/resources/contact.dart';
 import 'package:ammu_portfolio/themes/typography.dart';
 import 'package:ammu_portfolio/widgets/common/base_layout.dart';
-import 'package:ammu_portfolio/widgets/common/icon_button_label.dart';
+import 'package:ammu_portfolio/widgets/contact/contact_details.dart';
 
 ///[ContactPage] is a screen that displays contact information and a brief description.
 class ContactPage extends StatelessWidget {
@@ -13,6 +13,7 @@ class ContactPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size screenSize = MediaQuery.of(context).size;
     return BaseLayout(
       currentIndex: 2,
       child: Container(
@@ -29,17 +30,19 @@ class ContactPage extends StatelessWidget {
             ),
             SizedBox(height: 20),
             Text(
-              Strings.contactHelper,
+              Contact.contactHelper,
               style: Theme.of(
                 context,
               ).textTheme.labelLarge600?.copyWith(color: AppColors.blackRock),
             ),
             SizedBox(height: 50),
-            IconButtonLabel(icon: Icons.phone, label: Contact.phoneNumber),
-            SizedBox(height: 20),
-            IconButtonLabel(icon: Icons.email, label: Contact.emailId),
-            SizedBox(height: 20),
-            IconButtonLabel(icon: Icons.location_city, label: Contact.location),
+            Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal:
+                    screenSize.width > 850 ? screenSize.width * 0.1 : 20,
+              ),
+              child: ContactDetails(),
+            ),
           ],
         ),
       ),
