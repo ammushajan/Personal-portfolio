@@ -39,6 +39,8 @@ dependencies:
   go_router: ^16.0.0
   google_fonts: ^6.2.1
   pigment: ^1.0.4
+  font_awesome_flutter: ^10.9.0
+  url_launcher: ^6.2.2
 
 dev_dependencies:
   flutter_test:
