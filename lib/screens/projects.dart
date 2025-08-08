@@ -14,9 +14,10 @@ class ProjectScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
     return BaseLayout(
+      currentIndex: 1,
       child: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(24.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -35,7 +36,8 @@ class ProjectScreen extends StatelessWidget {
               ),
               Padding(
                 padding: EdgeInsets.symmetric(
-                  horizontal: screenSize.width * 0.1,
+                  horizontal:
+                      screenSize.width > 850 ? screenSize.width * 0.1 : 0,
                   vertical: 40.0,
                 ),
                 child: ProjectListing(),

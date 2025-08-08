@@ -10,4 +10,6 @@ class Strings {
   static const String role = 'Senior Software Engineer ';
   static const String description =
       'Passionate Front-End Developer crafting responsive, user-friendly interfaces with clean code and creative flair. Bridging design and tech to build smooth, engaging web & mobile experiences.';
+  static const String contactHelper =
+      ' Let’s connect and build something great!';
 }
