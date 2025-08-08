@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:personal_portfolio/routes.dart';
-import 'package:personal_portfolio/themes/themes.dart';
+import 'package:ammu_portfolio/routes.dart';
+import 'package:ammu_portfolio/themes/themes.dart';
 
 /// [PortfoilioApp] is the main application widget that sets up the MaterialApp
 /// with the router configuration.

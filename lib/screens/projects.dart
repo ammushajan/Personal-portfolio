@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'package:personal_portfolio/themes/colors.dart';
-import 'package:personal_portfolio/resources/projects.dart';
-import 'package:personal_portfolio/themes/typography.dart';
-import 'package:personal_portfolio/widgets/common/base_layout.dart';
-import 'package:personal_portfolio/widgets/projects/project_listing.dart';
+import 'package:ammu_portfolio/themes/colors.dart';
+import 'package:ammu_portfolio/resources/projects.dart';
+import 'package:ammu_portfolio/themes/typography.dart';
+import 'package:ammu_portfolio/widgets/common/base_layout.dart';
+import 'package:ammu_portfolio/widgets/projects/project_listing.dart';
 
 /// [ProjectScreen] is a placeholder screen for the projects section of the portfolio.
 class ProjectScreen extends StatelessWidget {

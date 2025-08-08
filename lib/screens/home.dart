@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:personal_portfolio/themes/colors.dart';
-import 'package:personal_portfolio/resources/strings.dart';
-import 'package:personal_portfolio/themes/typography.dart';
-import 'package:personal_portfolio/widgets/common/base_layout.dart';
+import 'package:ammu_portfolio/themes/colors.dart';
+import 'package:ammu_portfolio/resources/strings.dart';
+import 'package:ammu_portfolio/themes/typography.dart';
+import 'package:ammu_portfolio/widgets/common/base_layout.dart';
 
 ///[HomePage] is a widget that represents the home screen of the application.
 class HomePage extends StatelessWidget {

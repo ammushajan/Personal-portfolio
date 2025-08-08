@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:personal_portfolio/themes/colors.dart';
-import 'package:personal_portfolio/themes/typography.dart';
+import 'package:ammu_portfolio/themes/colors.dart';
+import 'package:ammu_portfolio/themes/typography.dart';
 
 ///[IconButtonLabel] is a widget that displays an icon button with a label.
 class IconButtonLabel extends StatelessWidget {

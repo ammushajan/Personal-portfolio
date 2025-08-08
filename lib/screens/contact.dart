@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:personal_portfolio/resources/contact.dart';
+import 'package:ammu_portfolio/resources/contact.dart';
 
-import 'package:personal_portfolio/themes/colors.dart';
-import 'package:personal_portfolio/resources/strings.dart';
-import 'package:personal_portfolio/themes/typography.dart';
-import 'package:personal_portfolio/widgets/common/base_layout.dart';
-import 'package:personal_portfolio/widgets/common/icon_button_label.dart';
+import 'package:ammu_portfolio/themes/colors.dart';
+import 'package:ammu_portfolio/resources/strings.dart';
+import 'package:ammu_portfolio/themes/typography.dart';
+import 'package:ammu_portfolio/widgets/common/base_layout.dart';
+import 'package:ammu_portfolio/widgets/common/icon_button_label.dart';
 
 ///[ContactPage] is a screen that displays contact information and a brief description.
 class ContactPage extends StatelessWidget {

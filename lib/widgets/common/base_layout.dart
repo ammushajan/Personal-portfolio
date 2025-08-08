@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:personal_portfolio/themes/colors.dart';
+import 'package:ammu_portfolio/themes/colors.dart';
 
-import 'package:personal_portfolio/widgets/common/header.dart';
+import 'package:ammu_portfolio/widgets/common/header.dart';
 
 /// [BaseLayout] is a widget that provides a common layout structure for the application.
 /// It includes an app bar and a body that can be customized with different widgets.
