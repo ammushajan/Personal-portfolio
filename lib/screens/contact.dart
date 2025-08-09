@@ -16,34 +16,39 @@ class ContactPage extends StatelessWidget {
     Size screenSize = MediaQuery.of(context).size;
     return BaseLayout(
       currentIndex: 2,
-      child: Container(
-        padding: const EdgeInsets.all(24.0),
-        constraints: BoxConstraints(minWidth: double.infinity),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              Strings.contactLabel,
-              style: Theme.of(context).textTheme.headlineMedium600?.copyWith(
-                color: AppColors.blackRock,
+      child: SingleChildScrollView(
+        child: Container(
+          padding: const EdgeInsets.all(24.0),
+          constraints: BoxConstraints(
+            minWidth: double.infinity,
+            minHeight: screenSize.height,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                Strings.contactLabel,
+                style: Theme.of(context).textTheme.headlineMedium600?.copyWith(
+                  color: AppColors.blackRock,
+                ),
               ),
-            ),
-            SizedBox(height: 20),
-            Text(
-              Contact.contactHelper,
-              style: Theme.of(
-                context,
-              ).textTheme.labelLarge600?.copyWith(color: AppColors.blackRock),
-            ),
-            SizedBox(height: 50),
-            Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal:
-                    screenSize.width > 850 ? screenSize.width * 0.1 : 20,
+              SizedBox(height: 20),
+              Text(
+                Contact.contactHelper,
+                style: Theme.of(
+                  context,
+                ).textTheme.labelLarge600?.copyWith(color: AppColors.blackRock),
               ),
-              child: ContactDetails(),
-            ),
-          ],
+              SizedBox(height: 50),
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal:
+                      screenSize.width > 850 ? screenSize.width * 0.1 : 20,
+                ),
+                child: ContactDetails(),
+              ),
+            ],
+          ),
         ),
       ),
     );
