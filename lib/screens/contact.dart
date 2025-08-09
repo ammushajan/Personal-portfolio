@@ -21,7 +21,7 @@ class ContactPage extends StatelessWidget {
           padding: const EdgeInsets.all(24.0),
           constraints: BoxConstraints(
             minWidth: double.infinity,
-            minHeight: screenSize.height,
+            minHeight: screenSize.height - 89,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
