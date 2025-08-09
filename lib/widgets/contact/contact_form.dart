@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:ammu_portfolio/themes/colors.dart';
 import 'package:ammu_portfolio/resources/contact.dart';
+import 'package:ammu_portfolio/utils/url_launcher.dart';
 import 'package:ammu_portfolio/widgets/common/text_field.dart';
 
 ///[ContactForm] is a widget that displays a form for users to fill out their contact information.
@@ -40,7 +41,9 @@ class ContactForm extends StatelessWidget {
             ),
             SizedBox(height: 40),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                UrlLauncher().sendEmail(recipient: Contact.emailId);
+              },
               child: Text(Contact.submitButtonLabel),
             ),
           ],

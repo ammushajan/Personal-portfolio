@@ -9,11 +9,14 @@ import 'package:ammu_portfolio/utils/url_launcher.dart';
 import 'package:ammu_portfolio/widgets/contact/contact_form.dart';
 import 'package:ammu_portfolio/widgets/common/icon_button_label.dart';
 
+///[ContactDetails] is a widget that displays contact information and a form for users to fill out.
+/// It includes fields for name, email, and message, along with social media links.
 class ContactDetails extends StatelessWidget {
   const ContactDetails({super.key});
 
   @override
   Widget build(BuildContext context) {
+    Size screenSize = MediaQuery.of(context).size;
     return Container(
       padding: EdgeInsets.all(36),
       decoration: BoxDecoration(
@@ -24,7 +27,8 @@ class ContactDetails extends StatelessWidget {
           width: 1,
         ),
       ),
-      child: Row(
+      child: Flex(
+        direction: screenSize.width > 850 ? Axis.horizontal : Axis.vertical,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -48,7 +52,13 @@ class ContactDetails extends StatelessWidget {
               SizedBox(height: 20),
               IconButtonLabel(icon: Icons.phone, label: Contact.phoneNumber),
               SizedBox(height: 20),
-              IconButtonLabel(icon: Icons.email, label: Contact.emailId),
+              IconButtonLabel(
+                icon: Icons.email,
+                label: Contact.emailId,
+                onPressed: () {
+                  UrlLauncher().sendEmail(recipient: Contact.emailId);
+                },
+              ),
               SizedBox(height: 20),
               IconButtonLabel(
                 icon: Icons.location_city,
@@ -83,6 +93,7 @@ class ContactDetails extends StatelessWidget {
                   ),
                 ],
               ),
+              SizedBox(height: 40),
             ],
           ),
           ContactForm(),
