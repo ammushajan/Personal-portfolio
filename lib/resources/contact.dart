@@ -17,4 +17,11 @@ class Contact {
   static const String messageHelper = 'Enter your message';
   static const String contactHelper =
       ' Let’s connect and explore how we can work together to create something amazing!';
+  static const String emailError = 'Please enter a your email';
+  static const String validEmailError = 'Please enter a valid email address';
+  static const String messageError = 'Please enter your message';
+  static const String formSubject = 'Contact Form Submission';
+  static const String formSuccessMessage =
+      'Email client opened, Please send your message!';
+  static const String formErrorMessage = 'Failed to send email: ';
 }

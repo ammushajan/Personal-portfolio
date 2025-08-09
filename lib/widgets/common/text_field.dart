@@ -8,16 +8,21 @@ class CommonTextField extends StatelessWidget {
   final String label;
   final String helperText;
   final int maxLines;
+  final String? Function(String?)? textValidator;
+  final TextEditingController? textController;
   const CommonTextField({
     required this.label,
     required this.helperText,
     this.maxLines = 1,
+    this.textValidator,
+    this.textController,
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: textController,
       decoration: InputDecoration(
         labelText: label,
         focusedBorder: OutlineInputBorder(
@@ -34,6 +39,7 @@ class CommonTextField extends StatelessWidget {
         hoverColor: AppColors.purplePizzazz,
       ),
       maxLines: maxLines,
+      validator: textValidator,
     );
   }
 }
