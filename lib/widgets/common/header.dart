@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 import 'package:go_router/go_router.dart';
 
-import 'package:personal_portfolio/themes/colors.dart';
-import 'package:personal_portfolio/themes/typography.dart';
-import 'package:personal_portfolio/widgets/common/flow_constants.dart';
+import 'package:ammu_portfolio/themes/colors.dart';
+import 'package:ammu_portfolio/themes/typography.dart';
+import 'package:ammu_portfolio/widgets/common/flow_constants.dart';
 
 ///[Header] is a custom app bar widget that displays the main navigation links
 /// for the application. It includes links to Home, About Me, Projects, and Contact.

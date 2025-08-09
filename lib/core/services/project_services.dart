@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
 
-import 'package:personal_portfolio/core/models/project_details_model.dart';
+import 'package:ammu_portfolio/core/models/project_details_model.dart';
 
 /// [ProjectServices] class to handle project-related operations such as loading project details.
 class ProjectServices {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:personal_portfolio/themes/colors.dart';
-import 'package:personal_portfolio/themes/typography.dart';
+import 'package:ammu_portfolio/themes/colors.dart';
+import 'package:ammu_portfolio/themes/typography.dart';
 
 /// [Themes] is a utility class that provides theme configurations for the application.
 /// It includes methods to build light and dark themes using the Material Design system.

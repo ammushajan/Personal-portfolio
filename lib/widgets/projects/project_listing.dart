@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:personal_portfolio/themes/colors.dart';
-import 'package:personal_portfolio/themes/typography.dart';
-import 'package:personal_portfolio/core/services/project_services.dart';
-import 'package:personal_portfolio/core/models/project_details_model.dart';
+import 'package:ammu_portfolio/themes/colors.dart';
+import 'package:ammu_portfolio/themes/typography.dart';
+import 'package:ammu_portfolio/core/services/project_services.dart';
+import 'package:ammu_portfolio/core/models/project_details_model.dart';
 
 ///[ProjectListing] is a widget that displays a list of projects.
 class ProjectListing extends StatefulWidget {

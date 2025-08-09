@@ -1,5 +1,5 @@
-import 'package:personal_portfolio/resources/strings.dart';
-import 'package:personal_portfolio/core/models/header_model.dart';
+import 'package:ammu_portfolio/resources/strings.dart';
+import 'package:ammu_portfolio/core/models/header_model.dart';
 
 //[headerList] is a list of [HeaderModel] objects that represent the headers
 List<HeaderModel> headerList = [

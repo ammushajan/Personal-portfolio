@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 
-import 'package:personal_portfolio/themes/colors.dart';
-import 'package:personal_portfolio/resources/strings.dart';
-import 'package:personal_portfolio/themes/typography.dart';
-import 'package:personal_portfolio/widgets/common/base_layout.dart';
+import 'package:ammu_portfolio/themes/colors.dart';
+import 'package:ammu_portfolio/resources/strings.dart';
+import 'package:ammu_portfolio/themes/typography.dart';
+import 'package:ammu_portfolio/resources/contact.dart';
+import 'package:ammu_portfolio/utils/url_launcher.dart';
+import 'package:ammu_portfolio/widgets/common/base_layout.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 ///[HomePage] is a widget that represents the home screen of the application.
 class HomePage extends StatelessWidget {
@@ -59,6 +62,35 @@ class HomePage extends StatelessWidget {
                     context,
                   ).textTheme.headlineSmall?.copyWith(color: AppColors.white),
                 ),
+              ),
+              SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                spacing: 20,
+                children: [
+                  IconButton(
+                    onPressed: () {
+                      UrlLauncher().launchInBrowser(Contact.githubUrl);
+                    },
+                    constraints: BoxConstraints(),
+                    padding: EdgeInsets.zero,
+                    icon: FaIcon(
+                      FontAwesomeIcons.github,
+                      color: AppColors.white,
+                    ),
+                  ),
+                  IconButton(
+                    onPressed: () {
+                      UrlLauncher().launchInBrowser(Contact.linkedInUrl);
+                    },
+                    constraints: BoxConstraints(),
+                    padding: EdgeInsets.zero,
+                    icon: FaIcon(
+                      FontAwesomeIcons.linkedin,
+                      color: AppColors.white,
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
