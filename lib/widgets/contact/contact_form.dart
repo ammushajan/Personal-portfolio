@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:ammu_portfolio/themes/colors.dart';
 import 'package:ammu_portfolio/resources/contact.dart';
+import 'package:ammu_portfolio/themes/typography.dart';
 import 'package:ammu_portfolio/utils/url_launcher.dart';
 import 'package:ammu_portfolio/widgets/common/text_field.dart';
 
@@ -98,9 +99,31 @@ class ContactForm extends StatelessWidget {
               textController: messageController,
             ),
             SizedBox(height: 40),
-            ElevatedButton(
-              onPressed: submitEmail,
-              child: Text(Contact.submitButtonLabel),
+            Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    AppColors.purplePizzazz,
+                    AppColors.cyan,
+                    AppColors.white,
+                  ],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  stops: const [0.0, 0.9, 1.0],
+                ),
+                borderRadius: BorderRadius.circular(12.0),
+              ),
+              child: TextButton(
+                onPressed: submitEmail,
+                style: TextButton.styleFrom(
+                  padding: EdgeInsets.symmetric(horizontal: 40, vertical: 12),
+                  foregroundColor: Colors.white, // Text color
+                  textStyle: Theme.of(
+                    context,
+                  ).textTheme.labelLarge600?.copyWith(color: AppColors.white),
+                ),
+                child: Text(Contact.submitButtonLabel),
+              ),
             ),
           ],
         ),
