@@ -35,7 +35,7 @@ class _ProjectListingState extends State<ProjectListing> {
       itemBuilder: (context, index) {
         final project = projects[index];
         return Padding(
-          padding: const EdgeInsets.only(bottom: 60.0),
+          padding: EdgeInsets.only(bottom: screenSize.width * 0.05),
           child: Flex(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             direction: screenSize.width > 850 ? Axis.horizontal : Axis.vertical,
@@ -48,9 +48,9 @@ class _ProjectListingState extends State<ProjectListing> {
                     style: Theme.of(context).textTheme.headlineExtraSmall600
                         ?.copyWith(color: AppColors.white),
                   ),
-                  SizedBox(height: 8),
+                  SizedBox(height: 12),
                   Container(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(12.0),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8.0),
                       color: AppColors.blackRock.withValues(alpha: 0.2),
@@ -66,13 +66,30 @@ class _ProjectListingState extends State<ProjectListing> {
                       ).textTheme.bodyLarge?.copyWith(color: AppColors.white),
                     ),
                   ),
-                  SizedBox(height: 8),
-                  Text(
-                    project.framework,
-                    style: Theme.of(
-                      context,
-                    ).textTheme.bodyLarge?.copyWith(color: AppColors.white),
+                  SizedBox(height: 12),
+                  Row(
+                    children: [
+                      ...project.frameworks.map(
+                        (element) => Padding(
+                          padding: const EdgeInsets.only(right: 8.0),
+                          child: Chip(
+                            side: BorderSide(
+                              color: AppColors.blackRock.withValues(alpha: 0.2),
+                            ),
+                            label: Text(
+                              element,
+                              style: Theme.of(context).textTheme.bodyMedium
+                                  ?.copyWith(color: AppColors.white),
+                            ),
+                            backgroundColor: AppColors.purplePizzazz.withValues(
+                              alpha: 0.2,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
+                  SizedBox(height: 12),
                 ],
               ),
               ClipRRect(

@@ -4,30 +4,26 @@ class ProjectDetails {
   final String title;
   final String description;
   final String image;
-  final String framework;
+  final List<String> frameworks;
 
   ProjectDetails({
     required this.title,
     required this.description,
     required this.image,
-    required this.framework,
+    required this.frameworks,
   });
 
-  factory ProjectDetails.fromJson(Map<String, dynamic> json) {
-    return ProjectDetails(
-      title: json['title'] as String,
-      description: json['description'] as String,
-      image: json['image'] as String,
-      framework: json['framework'] as String,
-    );
-  }
+  factory ProjectDetails.fromJson(Map<String, dynamic> json) => ProjectDetails(
+    title: json["title"],
+    description: json["description"],
+    image: json["image"],
+    frameworks: List<String>.from(json["frameworks"].map((x) => x)),
+  );
 
-  Map<String, dynamic> toJson() {
-    return {
-      'title': title,
-      'description': description,
-      'image': image,
-      'framework': framework,
-    };
-  }
+  Map<String, dynamic> toJson() => {
+    "title": title,
+    "description": description,
+    "image": image,
+    "frameworks": List<dynamic>.from(frameworks.map((x) => x)),
+  };
 }
