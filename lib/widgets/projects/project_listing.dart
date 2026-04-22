@@ -4,6 +4,7 @@ import 'package:ammu_portfolio/themes/colors.dart';
 import 'package:ammu_portfolio/themes/typography.dart';
 import 'package:ammu_portfolio/core/services/project_services.dart';
 import 'package:ammu_portfolio/core/models/project_details_model.dart';
+import 'package:ammu_portfolio/widgets/common/page_skeletons.dart';
 
 ///[ProjectListing] is a widget that displays a list of projects.
 class ProjectListing extends StatefulWidget {
@@ -15,19 +16,49 @@ class ProjectListing extends StatefulWidget {
 
 class _ProjectListingState extends State<ProjectListing> {
   List<ProjectDetails> projects = [];
+  bool _isLoading = true;
+
   @override
   void initState() {
     super.initState();
-    ProjectServices().loadProjectDetails().then((data) {
-      setState(() {
-        projects = data;
-      });
-    });
+    ProjectServices()
+        .loadProjectDetails()
+        .then((data) {
+          if (!mounted) {
+            return;
+          }
+          setState(() {
+            projects = data;
+            _isLoading = false;
+          });
+        })
+        .catchError((_) {
+          if (!mounted) {
+            return;
+          }
+          setState(() {
+            _isLoading = false;
+          });
+        });
   }
 
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
+
+    if (_isLoading) {
+      return const ProjectListSkeleton();
+    }
+
+    if (projects.isEmpty) {
+      return Text(
+        'No projects available right now.',
+        style: Theme.of(
+          context,
+        ).textTheme.bodyLarge?.copyWith(color: AppColors.white),
+      );
+    }
+
     return ListView.builder(
       shrinkWrap: true,
       physics: ScrollPhysics(),
